@@ -15,16 +15,21 @@ interface Props {
 }
 
 const ImageGallery = ({ categories, shoots }: Props) => {
+  // Set initial state to "all"
   const [selectedCategory, setSelectedCategory] = useState<string | undefined>(
-    categories[0]?.slug?.current
+    "all"
   );
-  const [filteredShoots, setFilteredShoots] = useState<ALL_SHOOTSResult>([]);
+  const [filteredShoots, setFilteredShoots] =
+    useState<ALL_SHOOTSResult>(shoots);
 
-  // Add useEffect to filter shoots on initial load
+  // Create an array with "All" category plus existing categories
+  const allCategories = [
+    { title: "All", slug: { current: "all" } },
+    ...categories,
+  ];
+
   useEffect(() => {
-    if (selectedCategory) {
-      handleFilter(selectedCategory);
-    }
+    handleFilter(selectedCategory);
   }, [selectedCategory]);
 
   const handleClick = (category: string | undefined) => {
@@ -32,10 +37,14 @@ const ImageGallery = ({ categories, shoots }: Props) => {
   };
 
   const handleFilter = (category: string | undefined) => {
-    const filtered = shoots.filter(
-      (shoot) => shoot.category?.slug?.current === category
-    );
-    setFilteredShoots(filtered);
+    if (category === "all") {
+      setFilteredShoots(shoots);
+    } else {
+      const filtered = shoots.filter(
+        (shoot) => shoot.category?.slug?.current === category
+      );
+      setFilteredShoots(filtered);
+    }
   };
 
   const gridVariants = {
@@ -65,7 +74,7 @@ const ImageGallery = ({ categories, shoots }: Props) => {
     <div className="w-full flex flex-col space-y-10 lg:space-y-16">
       {/* CATEGORIES */}
       <div className="flex flex-row space-x-3 relative w-full overflow-x-scroll">
-        {categories.map((category, index) => (
+        {allCategories.map((category, index) => (
           <motion.div
             key={index}
             onClick={() => handleClick(category.slug?.current)}

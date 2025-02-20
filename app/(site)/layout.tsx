@@ -80,7 +80,7 @@ export default function RootLayout({
           ${ralewaySemiBold.variable} 
           ${ralewayBold.variable} 
           ${ralewayExtraBold.variable} 
-          antialiased flex-1 overflow-x-hidden bg-background scroll-smooth font-raleway`}
+          antialiased flex-1 overflow-x-hidden bg-white scroll-smooth font-raleway`}
       >
         <ScrollToTop />
         {children}

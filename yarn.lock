@@ -2476,6 +2476,19 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@radix-ui/react-compose-refs@npm:1.1.1":
+  version: 1.1.1
+  resolution: "@radix-ui/react-compose-refs@npm:1.1.1"
+  peerDependencies:
+    "@types/react": "*"
+    react: ^16.8 || ^17.0 || ^18.0 || ^19.0 || ^19.0.0-rc
+  peerDependenciesMeta:
+    "@types/react":
+      optional: true
+  checksum: 1be82f9f7fab96cc10f167a2e4f976e0135a63d473334f664c06f02af13bc5ea1994cb0505f89ed190d756cb65d57506721c030908af07e49b9e3cfd36044f33
+  languageName: node
+  linkType: hard
+
 "@radix-ui/react-context@npm:1.1.0":
   version: 1.1.0
   resolution: "@radix-ui/react-context@npm:1.1.0"
@@ -2794,7 +2807,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@radix-ui/react-slot@npm:1.1.0, @radix-ui/react-slot@npm:^1.1.0":
+"@radix-ui/react-slot@npm:1.1.0":
   version: 1.1.0
   resolution: "@radix-ui/react-slot@npm:1.1.0"
   dependencies:
@@ -2806,6 +2819,21 @@ __metadata:
     "@types/react":
       optional: true
   checksum: 3c9cd90aabf08f541e20dbecb581744be01c552a0cd16e90d7c218381bcc5307aa8a6013d045864e692ba89d3d8c17bfae08df18ed18be6d223d9330ab0302fa
+  languageName: node
+  linkType: hard
+
+"@radix-ui/react-slot@npm:^1.1.2":
+  version: 1.1.2
+  resolution: "@radix-ui/react-slot@npm:1.1.2"
+  dependencies:
+    "@radix-ui/react-compose-refs": 1.1.1
+  peerDependencies:
+    "@types/react": "*"
+    react: ^16.8 || ^17.0 || ^18.0 || ^19.0 || ^19.0.0-rc
+  peerDependenciesMeta:
+    "@types/react":
+      optional: true
+  checksum: f341cd66b284061a5147a67f6d7b8a7337a4c076b97ce087bcb1358fa36e9714ef988cc7ea2c2ed3b6ec3f17adafd2460851b31ed8f4dd73ea22b0b11e22ab97
   languageName: node
   linkType: hard
 
@@ -5808,6 +5836,43 @@ __metadata:
   languageName: node
   linkType: hard
 
+"embla-carousel-autoplay@npm:^8.5.2":
+  version: 8.5.2
+  resolution: "embla-carousel-autoplay@npm:8.5.2"
+  peerDependencies:
+    embla-carousel: 8.5.2
+  checksum: 4a39109f82645b4ec2f41b52de644ec80334bbcd115cbe4cfd23a3ba0387188e74b1526a1a160ef1a2b544177c88ed1d51927ae98780824692ae9b4b2ac94e80
+  languageName: node
+  linkType: hard
+
+"embla-carousel-react@npm:^8.5.2":
+  version: 8.5.2
+  resolution: "embla-carousel-react@npm:8.5.2"
+  dependencies:
+    embla-carousel: 8.5.2
+    embla-carousel-reactive-utils: 8.5.2
+  peerDependencies:
+    react: ^16.8.0 || ^17.0.1 || ^18.0.0 || ^19.0.0 || ^19.0.0-rc
+  checksum: 695e43b8675738a1257620fe5271b19bfcc61d885d56aa2d590a801c3f9d14a9bd8f1bbaf5a75b985f20edb6eee1171cccc0fa0c0a7d5cd278f72d5021354dea
+  languageName: node
+  linkType: hard
+
+"embla-carousel-reactive-utils@npm:8.5.2":
+  version: 8.5.2
+  resolution: "embla-carousel-reactive-utils@npm:8.5.2"
+  peerDependencies:
+    embla-carousel: 8.5.2
+  checksum: b2111b11ac41aed1910286ef9105c509ca531580d87d8e3531b3d73ab6adbfd58afd91542bce0440ac50ba3e0c2e7f6267b53c9554ed740cd105174d11598afd
+  languageName: node
+  linkType: hard
+
+"embla-carousel@npm:8.5.2":
+  version: 8.5.2
+  resolution: "embla-carousel@npm:8.5.2"
+  checksum: fd994984c846818ba466b0c62f4a3c2d386146705fa2082b7adeee7cf49b3b41f5c87c4f0009cb1439891ede7c5e5c854358bf4476164aa72b8b0ef45f6270bc
+  languageName: node
+  linkType: hard
+
 "emoji-regex@npm:^8.0.0":
   version: 8.0.0
   resolution: "emoji-regex@npm:8.0.0"
@@ -6506,7 +6571,7 @@ __metadata:
   dependencies:
     "@radix-ui/react-dialog": ^1.1.2
     "@radix-ui/react-dropdown-menu": ^2.1.2
-    "@radix-ui/react-slot": ^1.1.0
+    "@radix-ui/react-slot": ^1.1.2
     "@sanity/cli": latest
     "@sanity/icons": ^3.4.0
     "@sanity/image-url": 1.1.0
@@ -6516,6 +6581,8 @@ __metadata:
     "@types/react-dom": ^18
     class-variance-authority: ^0.7.0
     clsx: ^2.1.1
+    embla-carousel-autoplay: ^8.5.2
+    embla-carousel-react: ^8.5.2
     eslint: ^8
     eslint-config-next: 15.0.2
     framer-motion: ^11.11.11
@@ -6526,6 +6593,7 @@ __metadata:
     postcss: ^8
     react: 19.0.0-rc-02c0e824-20241028
     react-dom: 19.0.0-rc-02c0e824-20241028
+    react-fast-marquee: ^1.6.5
     sanity: 3.62.3
     styled-components: 6.1.13
     tailwind-merge: ^2.5.4
@@ -9937,6 +10005,16 @@ __metadata:
   version: 3.2.2
   resolution: "react-fast-compare@npm:3.2.2"
   checksum: 2071415b4f76a3e6b55c84611c4d24dcb12ffc85811a2840b5a3f1ff2d1a99be1020d9437ee7c6e024c9f4cbb84ceb35e48cf84f28fcb00265ad2dfdd3947704
+  languageName: node
+  linkType: hard
+
+"react-fast-marquee@npm:^1.6.5":
+  version: 1.6.5
+  resolution: "react-fast-marquee@npm:1.6.5"
+  peerDependencies:
+    react: ">= 16.8.0 || ^18.0.0"
+    react-dom: ">= 16.8.0 || ^18.0.0"
+  checksum: 5213b10983f47a2dc27c3206144f96b37dad2f08457b19ecb9e393e4bd3c8db8c9cccf1758ceb5c4ca6d697e3715f3f90c5d806e4cb62bbbad9ece7f0e7b3caf
   languageName: node
   linkType: hard
 

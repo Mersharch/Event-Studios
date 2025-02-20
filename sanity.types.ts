@@ -219,6 +219,35 @@ export type ALL_CATEGORIESResult = Array<{
   description?: string;
 }>;
 
+// Source: ./sanity/services/getClients.ts
+// Variable: ALL_CLIENTS
+// Query: *[            _type == "client"        ]| order(name asc){          _id,          name,          image{              asset{                _ref              }            },            slug{            current          }        }
+export type ALL_CLIENTSResult = Array<{
+  _id: string;
+  name: string | null;
+  image: {
+    asset: {
+      _ref: string;
+    } | null;
+  } | null;
+  slug: {
+    current: string | null;
+  } | null;
+}>;
+
+// Source: ./sanity/services/getFeatured.ts
+// Variable: ALL_FEATURED
+// Query: *[            _type == "gallery" && isFeatured == true        ]        | order(name asc){            name,            mainImage{              asset{                _ref              }            },            isFeatured        }
+export type ALL_FEATUREDResult = Array<{
+  name: string | null;
+  mainImage: {
+    asset: {
+      _ref: string;
+    } | null;
+  } | null;
+  isFeatured: boolean | null;
+}>;
+
 // Source: ./sanity/services/getShoots.ts
 // Variable: ALL_SHOOTS
 // Query: *[            _type == "gallery"        ]        | order(name asc){            name,            mainImage{              asset{                _ref              }            },            isFeatured,              category->{                slug{                current                }              },            slug{                current            }        }
@@ -262,6 +291,8 @@ import "@sanity/client";
 declare module "@sanity/client" {
   interface SanityQueries {
     "\n        *[\n            _type == \"category\"\n        ]\n        | order(title asc)\n        ": ALL_CATEGORIESResult;
+    "\n        *[\n            _type == \"client\"\n        ]\n| order(name asc){\n          _id,\n          name,\n          image{\n              asset{\n                _ref\n              }\n            },\n            slug{\n            current\n          }\n        }\n        ": ALL_CLIENTSResult;
+    "\n       *[\n            _type == \"gallery\" && isFeatured == true\n        ]\n        | order(name asc){\n            name,\n            mainImage{\n              asset{\n                _ref\n              }\n            },\n            isFeatured\n        }\n        ": ALL_FEATUREDResult;
     "\n       *[\n            _type == \"gallery\"\n        ]\n        | order(name asc){\n            name,\n            mainImage{\n              asset{\n                _ref\n              }\n            },\n            isFeatured,\n              category->{\n                slug{\n                current\n                }\n              },\n            slug{\n                current\n            }\n        }\n        ": ALL_SHOOTSResult;
     "\n      *[_type == \"gallery\" && slug.current == $slug][0]{\n  name,\n  mainImage{\n    asset{\n      _ref\n    }\n  },\n  additionalImages[]{\n    asset{\n      _ref\n    }\n  }\n}\n        ": SINGLE_SHOOTResult;
   }
