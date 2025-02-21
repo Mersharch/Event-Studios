@@ -61,15 +61,15 @@ export default function SingleShoot({ shoot }: Props) {
   };
 
   return (
-    <div className="flex flex-col flex-1 space-y-10 lg:space-y-20 px-3 md:px-5 lg:px-20 w-full">
-      <div className="flex flex-col space-y-5">
+    <div className="flex flex-col flex-1 space-y-20  px-3 md:px-5 lg:px-20 w-full">
+      <div className="flex flex-col space-y-10">
         <button
           onClick={handleGoBack}
-          className="mb-4 bg-primary hover:bg-primary/80 text-white font-bold py-2 px-4 rounded self-start max-w-40"
+          className="mb-4 bg-primary-foreground  text-primary font-bold py-2 px-4 rounded self-start max-w-40"
         >
           Go Back
         </button>
-        <h1 className="font-brittany text-primary text-6xl lg:text-7xl xl:text-8xl text-center lg:text-left mx-auto">
+        <h1 className="font-brittany text-primary text-3xl lg:text-4xl xl:text-5xl text-center lg:text-left mx-auto">
           {shoot?.name}
         </h1>
       </div>
@@ -80,7 +80,7 @@ export default function SingleShoot({ shoot }: Props) {
           variants={gridVariants}
           initial="hidden"
           animate="visible"
-          className="flex-1 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 overflow-hidden"
+          className="flex-1 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2 overflow-hidden"
         >
           {images?.map((image, index) => (
             <Dialog key={index}>

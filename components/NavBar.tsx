@@ -83,7 +83,7 @@ function NavBar() {
         </motion.div>
 
         {/* REGULAR MENU */}
-        <div className="hidden lg:flex flex-row items-center rounded-full lg:bg-secondary/70 px-10 py-3 space-x-40">
+        <div className="hidden lg:flex flex-row items-center rounded-full lg:bg-primary-foreground px-10 py-3 space-x-40">
           <div className="flex items-center space-x-10">
             {navItems.map((item) => (
               <Link
@@ -123,7 +123,7 @@ function NavBar() {
             </button>
           )}
           {isMobileMenuOpen && (
-            <div className="absolute top-0 left-0 w-full h-screen bg-black bg-opacity-50 flex flex-col">
+            <div className="absolute top-0 left-0 w-full h-screen bg-black bg-opacity-75 flex flex-col z-40">
               <button
                 onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
                 className="p-2 hover:scale-110 transition-all ease-in-out cursor-pointer dark:text-black text-white rounded max-w-fit bg-none dark:bg-white text-2xl font-crimsonBold self-end mt-3 mr-3"

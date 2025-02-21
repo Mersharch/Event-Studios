@@ -73,12 +73,12 @@ const ImageGallery = ({ categories, shoots }: Props) => {
   return (
     <div className="w-full flex flex-col space-y-10 lg:space-y-16">
       {/* CATEGORIES */}
-      <div className="flex flex-row space-x-3 relative w-full overflow-x-scroll">
+      <div className="flex flex-row space-x-3 relative w-full overflow-x-auto no-scrollbar">
         {allCategories.map((category, index) => (
           <motion.div
             key={index}
             onClick={() => handleClick(category.slug?.current)}
-            className={`w-40 flex justify-center items-center cursor-pointer relative rounded-full`}
+            className={`min-w-40 flex justify-center items-center cursor-pointer relative rounded-full`}
             initial={{ opacity: 1 }}
             whileHover={{ scale: 0.9 }}
             whileTap={{ scale: 0.95 }}
