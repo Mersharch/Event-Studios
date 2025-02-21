@@ -43,18 +43,8 @@ function NavBar() {
   const socials = [
     {
       name: "Instagram",
-      link: "",
+      link: "https://www.instagram.com/eventstudios_",
       icon: <Instagram className="w-6 h-6 text-black" />,
-    },
-    {
-      name: "X",
-      link: "",
-      icon: <Twitter className="w-6 h-6 text-black" />,
-    },
-    {
-      name: "Facebook",
-      link: "",
-      icon: <Facebook className="w-6 h-6 text-black" />,
     },
   ];
 
@@ -83,7 +73,7 @@ function NavBar() {
         </motion.div>
 
         {/* REGULAR MENU */}
-        <div className="hidden lg:flex flex-row items-center rounded-full lg:bg-primary-foreground px-10 py-3 space-x-40">
+        <div className="hidden lg:flex flex-row items-center rounded-full lg:bg-primary-foreground/70 px-10 py-3 space-x-40">
           <div className="flex items-center space-x-10">
             {navItems.map((item) => (
               <Link

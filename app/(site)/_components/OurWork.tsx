@@ -5,6 +5,7 @@ import { Snowflake } from "lucide-react";
 import React from "react";
 import { getFeatured } from "@/sanity/services/getFeatured";
 import FeaturedCarousel from "./FeaturedCarousel";
+import Link from "next/link";
 
 export default async function OurWork() {
   const featured = await getFeatured();
@@ -33,8 +34,11 @@ export default async function OurWork() {
               </span>{" "}
               that tell your unique story.
             </p>
-            <Button className="bg-secondary text-black rounded-full font-bold max-w-fit hover:bg-primary-foreground hover:scale-95 transition-all ease-in-out">
-              See Our Work
+            <Button
+              className="bg-secondary text-black rounded-full font-bold max-w-fit hover:bg-primary-foreground hover:scale-95 transition-all ease-in-out"
+              asChild
+            >
+              <Link href={"/gallery"}>See Our Work</Link>
             </Button>
           </div>
         </div>

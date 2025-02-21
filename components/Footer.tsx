@@ -1,4 +1,4 @@
-import { Facebook, Instagram, Phone, Twitter } from "lucide-react";
+import { Facebook, Instagram, MailIcon, Phone, Twitter } from "lucide-react";
 import Link from "next/link";
 import React from "react";
 
@@ -6,18 +6,8 @@ function Footer() {
   const socials = [
     {
       name: "Instagram",
-      link: "",
+      link: "https://www.instagram.com/eventstudios_",
       icon: <Instagram className="w-6 h-6 text-black" />,
-    },
-    {
-      name: "Twitter",
-      link: "",
-      icon: <Twitter className="w-6 h-6 text-black" />,
-    },
-    {
-      name: "Facebook",
-      link: "",
-      icon: <Facebook className="w-6 h-6 text-black" />,
     },
   ];
   return (
@@ -43,12 +33,25 @@ function Footer() {
           ))}
         </div>
 
-        <div className="flex items-center space-x-3 ">
+        <Link
+          href={"tel:+233267618532"}
+          className="flex items-center space-x-3 "
+        >
           <Phone className="w-6 h-6 text-black" />
           <h3 className="text-lg md:text-xl lg:text-2xl text-slate-500 font-bold">
-            +233 32 456 5677
+            +233 26 761 8532
           </h3>
-        </div>
+        </Link>
+
+        <Link
+          href={"mailto: eventstudiosgh12@gmail.com"}
+          className="flex items-center space-x-3 "
+        >
+          <MailIcon className="w-6 h-6 text-black" />
+          <h3 className="text-lg md:text-xl lg:text-2xl text-slate-500 font-bold">
+            eventstudiosgh12@gmail.com
+          </h3>
+        </Link>
       </div>
     </footer>
   );
