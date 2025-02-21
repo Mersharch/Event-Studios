@@ -50,7 +50,7 @@ export default async function Partners() {
           priority
           className="hidden md:block"
         />
-        <p className="text-center w-full max-w-[400px] text-slate-400 text-lg">
+        <p className="text-center w-full max-w-[400px] text-slate-500 text-lg">
           <span className="text-black font-bold">Event Studios</span> is a top
           photography company that captures unforgettable moments,{" "}
           <span className="text-black font-bold">provides stunning images</span>{" "}
