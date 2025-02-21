@@ -1,11 +1,4 @@
-import {
-  Facebook,
-  Instagram,
-  MailIcon,
-  MessageCircle,
-  Phone,
-  Twitter,
-} from "lucide-react";
+import { Instagram, MailIcon, MessageCircle, Phone } from "lucide-react";
 import Link from "next/link";
 import React from "react";
 
