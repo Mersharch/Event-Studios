@@ -1,4 +1,4 @@
-import { Facebook, Instagram, Phone, Twitter } from "lucide-react";
+import { MessageCircle, Instagram, Phone, MailIcon } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
@@ -7,19 +7,18 @@ function About() {
   const socials = [
     {
       name: "Instagram",
-      link: "",
+      link: "https://www.instagram.com/eventstudios_",
       icon: <Instagram className="w-6 h-6 text-black" />,
     },
     {
-      name: "Twitter",
-      link: "",
-      icon: <Twitter className="w-6 h-6 text-black" />,
+      name: "WhatsApp",
+      link: "https://api.whatsapp.com/message/BSVUK7C44BFKJ1",
+      icon: <MessageCircle className="w-6 h-6 text-black" />,
     },
     {
-      name: "Facebook",
-      link: "",
-      icon: <Facebook className="w-6 h-6 text-black" />,
-    },
+      name: "Mail",
+      link: "mailto: eventstudiosgh12@gmail.com",
+      icon: <MailIcon className="w-6 h-6 text-black" />
   ];
   return (
     <div className="flex flex-col min-h-screen px-4 sm:px-6 md:px-8 lg:px-10 py-8 md:py-12 lg:py-16 overflow-x-hidden">
