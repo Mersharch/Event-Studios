@@ -38,6 +38,7 @@ function About() {
             {socials.map((social, index) => (
               <Link
                 href={social.link}
+                target="_blank"
                 className="flex items-center justify-center rounded-xl border border-slate-500 
                      cursor-pointer hover:bg-slate-50 transition-colors
                      w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16"
