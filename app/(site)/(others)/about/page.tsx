@@ -18,7 +18,8 @@ function About() {
     {
       name: "Mail",
       link: "mailto: eventstudiosgh12@gmail.com",
-      icon: <MailIcon className="w-6 h-6 text-black" />
+      icon: <MailIcon className="w-6 h-6 text-black" />,
+    },
   ];
   return (
     <div className="flex flex-col min-h-screen px-4 sm:px-6 md:px-8 lg:px-10 py-8 md:py-12 lg:py-16 overflow-x-hidden">
