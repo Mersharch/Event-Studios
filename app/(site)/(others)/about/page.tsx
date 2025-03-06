@@ -50,7 +50,7 @@ function About() {
           <div className="flex items-center space-x-4 mt-4">
             <Phone className="w-5 h-5" />
             <span className="font-bold text-base sm:text-lg">
-              +233 32 456 5677
+              +233 54 799 7157
             </span>
           </div>
         </div>
