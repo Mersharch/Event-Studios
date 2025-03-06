@@ -45,7 +45,7 @@ function Footer() {
           >
             <Phone className="w-6 h-6 text-black" />
             <h3 className="text-lg md:text-xl lg:text-2xl text-slate-500 font-bold">
-              +233 26 761 8532
+              +233 54 799 7157
             </h3>
           </Link>
 
