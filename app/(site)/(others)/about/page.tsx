@@ -82,7 +82,7 @@ function About() {
       {/* Images section */}
       <div className="relative h-80 sm:h-96 md:h-[400px] lg:h-[400px] mt-8 lg:mt-0">
         <Image
-          src="/images/about-img.png"
+          src="/images/IMG_7532.jpg"
           width={500}
           height={500}
           alt="about-img"
