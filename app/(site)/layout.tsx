@@ -4,6 +4,7 @@ import "../globals.css";
 import Footer from "@/components/Footer";
 import ScrollToTop from "@/components/ScrollToTop";
 import { SanityLive } from "@/sanity/lib/live";
+import { SpeedInsights } from "@vercel/speed-insights/next"
 
 const brittanySignature = localFont({
   src: "../fonts/BrittanySignature.ttf",
@@ -86,6 +87,7 @@ export default function RootLayout({
         {children}
         <Footer />
         <SanityLive />
+        <SpeedInsights />
       </body>
     </html>
   );
